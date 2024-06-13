@@ -88,9 +88,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export MYSQL_HOME=/usr/local/mysql
-export PATH=${MYSQL_HOME}/bin:${PATH}
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -114,8 +111,6 @@ export PATH=${MYSQL_HOME}/bin:${PATH}
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias dotnetef6="~/dotnet_efs/dotnet_ef_6/dotnet-ef"
-alias dotnetef8="~/dotnet_efs/dotnet_ef_8/dotnet-ef"
 
 alias ls='lsd'
 alias nv='nvim'

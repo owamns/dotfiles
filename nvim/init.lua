@@ -1,6 +1,6 @@
+require("plugins.packer")
 require("settings")
 require("keymaps")
-require("plugins.packer")
 -- Plugins
 require("plugins.nord")
 require("plugins.bufferline")

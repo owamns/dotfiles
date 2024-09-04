@@ -24,4 +24,3 @@ bspc rule -a pavucontrol state=floating
 ~/.config/polybar/launch.sh &
 nitrogen --restore &
 picom &
-polybar &

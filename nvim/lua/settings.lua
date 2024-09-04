@@ -39,7 +39,7 @@ o.writebackup = false
 o.errorbells = false
 
 -- Establece el ancho de la sangría a 4 espacios
-o.shiftwidth = 4
+o.shiftwidth = 2
 
 -- Usa espacios en lugar de tabuladores para la sangría
 o.expandtab = true
@@ -57,7 +57,7 @@ o.rnu = true
 o.numberwidth = 1
 
 -- Desactiva el ajuste de línea
-o.wrap = false
+o.wrap = true
 
 -- Desactiva la creación de archivos de intercambio
 o.swapfile = false

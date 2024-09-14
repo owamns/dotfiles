@@ -4,6 +4,7 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc monitor -d 1 2 3 4 5 6
 
+
 #borders
 bspc config focused_border_color "#44475a"
 bspc config normal_border_color "#1f222b"
@@ -20,7 +21,9 @@ bspc config window_gap 8
 
 #rules
 bspc rule -a pavucontrol state=floating
+bspc rule -a Thunar state=floating
 
+~/Scripts/monitor.sh &
 ~/.config/polybar/launch.sh &
 nitrogen --restore &
 picom &

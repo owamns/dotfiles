@@ -5,12 +5,22 @@ h=$3
 x=$4
 y=$5
 
-if [[ "$( file -Lb --mime-type "$file")" =~ ^image ]]; then
+mime=$(file -Lb --mime-type "$file")
+extension="${file##*.}"
+
+if [[ "$mime" =~ ^image ]]; then
     kitty +kitten icat --silent --stdin no --transfer-mode file --place "${w}x${h}@${x}x${y}" "$file" < /dev/null > /dev/tty
     exit 1
-elif [[ "$( file -Lb --mime-type "$file")" =~ ^text ]]; then
-    cat "$file"
+elif [[ "$mime" =~ ^text || "$mime" == "application/json" || "$extension" =~ ^(ts|js|py|md|css|html)$ ]]; then
+    bat --color=always "$file"
+    exit 1
+elif [[ "$mime" =~ application/pdf ]]; then
+    tmpdir=$(mktemp -d)
+    pdftoppm -f 1 -l 1 -png "$file" "${tmpdir}/page"
+    kitty +kitten icat --silent --stdin no --transfer-mode file --place "${w}x${h}@${x}x${y}" "${tmpdir}/page-1.png" < /dev/null > /dev/tty
+    rm "${tmpdir}/page-1.png"
+    rmdir "$tmpdir"
     exit 1
 fi
 
-pistol "$file"
+exit 1

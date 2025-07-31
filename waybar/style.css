@@ -1,0 +1,189 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 12px;
+}
+
+window#waybar {
+  /* Fondo transparente (si quieres dejar ver la imagen de fondo) */
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.modules-left {
+  background-color: #1c1f26;
+  border-radius: 12px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.modules-center {
+  background-color: #1c1f26;
+  border-radius: 12px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.modules-right {
+  background-color: #1c1f26;
+  border-radius: 12px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#custom-icon {
+  font-size: 20px;
+  color: #ced5e0;
+  padding-right: 10px;
+}
+
+#cpu,
+#memory,
+#temperature {
+  font-size: 14px;
+  background: #282c34;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#cpu {
+  color: #e06c75; /* Salmón/rojo */
+  padding: 0px 10px 0px 12px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+#memory {
+  color: #98c379; /* Verde */
+  padding: 0px 10px 0px 0px;
+}
+
+#temperature {
+  color: #56b6c2; /* Cian */
+  padding: 0px 12px 0px 0px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+#custom-window-name {
+  margin-right: 10px;
+  color: #abb2bf; /* Texto base */
+}
+
+#custom-pacman-update-icon {
+  font-size: 13px;
+  background-color: #d19a66; /* Dorado suave */
+  color: #1c1f26;
+  padding-left: 5px;
+  padding-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+#custom-pacman-update {
+  color: #d19a66;
+  margin: 5px 5px 5px 0px;
+}
+
+#workspaces button label {
+  color: #abb2bf;
+  margin: 0px 8px;
+}
+
+#workspaces button.active label {
+  color: #F9DE8F;
+  margin: 0px 8px;
+}
+
+#battery {
+  color: #98c379; /* Verde */
+  margin: 0px 10px 0px 0px;
+}
+
+#battery.warning {
+    background-color: #1c1f26; 
+    color: #F9DE8F;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.critical {
+    background-color: #1c1f26; 
+    color: #f53c3c;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#pulseaudio,
+#backlight {
+  font-size: 14px;
+  background: #282c34;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#backlight {
+  color: #e06c75; /* Rojo/salmón */
+  padding: 0px 10px 0px 10px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+#pulseaudio {
+  color: #56b6c2; /* Cian */
+  padding: 0px 15px 0px 0px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+#custom-right-arr {
+  color: #56b6c2; /* Cian */
+}
+
+#network {
+  color: #c678dd; /* Morado */
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#custom-dot {
+  color: #5c6370; /* Gris intermedio */
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#custom-dot-alt {
+  color: #abb2bf; /* Gris claro */
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#custom-clock-icon {
+  font-size: 13px;
+  background-color: #d19a66; /* Dorado suave */
+  color: #1c1f26;
+  padding-left: 8px;
+  padding-right: 13px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+#clock {
+  padding-left: 10px;
+  color: #abb2bf; /* Texto base */
+}
+
+#language {
+    font-size: 14px;
+    background: #282c34;
+    color: #c678dd; /* Morado, consistente con #network */
+    padding: 0px 10px 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px; /* Espacio entre #language y #backlight */
+    border-radius: 5px;
+}

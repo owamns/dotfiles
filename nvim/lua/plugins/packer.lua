@@ -32,7 +32,12 @@ return require("packer").startup(function(use)
   use("akinsho/bufferline.nvim")
 
   -- Theme
-  use("shaunsingh/nord.nvim")
+  use("zaldih/themery.nvim")
+  use("folke/tokyonight.nvim")
+  use("rebelot/kanagawa.nvim")
+  use("EdenEast/nightfox.nvim")
+  use("navarasu/onedark.nvim")
+  use("marko-cerovac/material.nvim")
 
   -- Autopairs
   use("windwp/nvim-autopairs")
@@ -70,6 +75,19 @@ return require("packer").startup(function(use)
 
   -- Nvim-lint
   use("mfussenegger/nvim-lint")
+
+  --Toggle term
+  use({
+    "akinsho/toggleterm.nvim",
+    tag = "*",
+    config = function()
+      require("toggleterm").setup()
+    end,
+  })
+
+  --Git visual
+  use("tpope/vim-fugitive")
+  use("lewis6991/gitsigns.nvim")
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
